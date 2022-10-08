@@ -1,4 +1,4 @@
-class ImageAsset {
+class AppImageAsset {
   //
   static const String rootImages = "assets/images";
 
