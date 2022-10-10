@@ -14,6 +14,9 @@ class Language extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text("Choose Language",
+                style: Theme.of(context).textTheme.headline1),
+            const SizedBox(height: 20),
             CustomButtonLang(textbutton: "Ar", onPressed: () {}),
             CustomButtonLang(textbutton: "En", onPressed: () {}),
           ],
