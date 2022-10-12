@@ -1,9 +1,11 @@
-import 'package:ecommerce_app/core/constant/color.dart';
+import 'package:ecommerce_app/core/constant/routes_name.dart';
+import 'package:ecommerce_app/core/localization/changelocal.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../widget/language/custombuttonlang.dart';
 
-class Language extends StatelessWidget {
+class Language extends GetView<LocaleController> {
   const Language({super.key});
 
   @override
@@ -14,11 +16,22 @@ class Language extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Choose Language",
-                style: Theme.of(context).textTheme.headline1),
+            Text("1".tr, style: Theme.of(context).textTheme.headline1),
             const SizedBox(height: 20),
-            CustomButtonLang(textbutton: "Ar", onPressed: () {}),
-            CustomButtonLang(textbutton: "En", onPressed: () {}),
+            CustomButtonLang(
+                textbutton: "Ar",
+                onPressed: () {
+                  controller.changeLang("ar");
+                  // Get.offAllNamed(AppRoute.onBoarding);
+                  Get.toNamed(AppRoute.onBoarding);
+                }),
+            CustomButtonLang(
+                textbutton: "En",
+                onPressed: () {
+                  controller.changeLang("en");
+                  // Get.offAllNamed(AppRoute.onBoarding);
+                  Get.toNamed(AppRoute.onBoarding);
+                }),
           ],
         ),
       ),
