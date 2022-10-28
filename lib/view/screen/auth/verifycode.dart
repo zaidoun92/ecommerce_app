@@ -1,20 +1,17 @@
-import 'package:ecommerce_app/controller/auth/forgetpassword_controller.dart';
+import 'package:ecommerce_app/controller/auth/verifycode_controller.dart';
 import 'package:ecommerce_app/core/constant/color.dart';
 import 'package:ecommerce_app/view/widget/auth/customtextbodyauth.dart';
-import 'package:ecommerce_app/view/widget/auth/customtextformauth.dart';
 import 'package:ecommerce_app/view/widget/auth/customtexttitleauth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
-
-import '../../widget/auth/custombuttonauth.dart';
 
 class VerfiyCode extends StatelessWidget {
   const VerfiyCode({super.key});
 
   @override
   Widget build(BuildContext context) {
-    ForgetPasswordControllerImp controller =
-        Get.put(ForgetPasswordControllerImp());
+    VerifyCodeControllerImp controller = Get.put(VerifyCodeControllerImp());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -35,18 +32,23 @@ class VerfiyCode extends StatelessWidget {
             const CustomTextTitleAuth(text: "Check Code"),
             const SizedBox(height: 10),
             const CustomTextBodyAuth(
-                text:
-                    "Sign Up With Your Email And Password Or Continue With Social Media"),
+                text: "Please Enter the Digit Code Sent To zaidoun@gmail.com"),
             const SizedBox(height: 15),
-            CustomTextFormAuth(
-              hintText: "Enter Your Email",
-              labelText: "Email",
-              iconData: Icons.email_outlined,
-              myController: controller.email,
-            ),
-            CustomButtonAuth(
-              text: "Check",
-              onPressed: () {},
+            OtpTextField(
+              fieldWidth: 50.0,
+              borderRadius: BorderRadius.circular(20),
+              numberOfFields: 5,
+              borderColor: const Color(0xFF512DA8),
+              //set to true to show as box or false to show as dash
+              showFieldAsBox: true,
+              //runs when a code is typed in
+              onCodeChanged: (String code) {
+                //handle validation or checks here
+              },
+              //runs when every textfield is filled
+              onSubmit: (String verificationCode) {
+                controller.goToResetPassword();
+              }, // end onSubmit
             ),
             const SizedBox(height: 40),
           ],
