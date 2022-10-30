@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/controller/auth/forgetpassword_controller.dart';
+import 'package:ecommerce_app/controller/auth/checkemail_controller.dart';
 import 'package:ecommerce_app/core/constant/color.dart';
 import 'package:ecommerce_app/view/widget/auth/customtextbodyauth.dart';
 import 'package:ecommerce_app/view/widget/auth/customtextformauth.dart';
@@ -8,20 +8,19 @@ import 'package:get/get.dart';
 
 import '../../widget/auth/custombuttonauth.dart';
 
-class ForgetPassword extends StatelessWidget {
-  const ForgetPassword({super.key});
+class CheckEmail extends StatelessWidget {
+  const CheckEmail({super.key});
 
   @override
   Widget build(BuildContext context) {
-    ForgetPasswordControllerImp controller =
-        Get.put(ForgetPasswordControllerImp());
+    CheckEmailControllerImp controller = Get.put(CheckEmailControllerImp());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: AppColor.backgroundColor,
         elevation: 0.0,
         title: Text(
-          'Forget Password',
+          'Check Email',
           style: Theme.of(context).textTheme.headline1!.copyWith(
                 color: AppColor.grey,
               ),
@@ -32,7 +31,7 @@ class ForgetPassword extends StatelessWidget {
         child: ListView(
           children: [
             const SizedBox(height: 20),
-            const CustomTextTitleAuth(text: "Check Email"),
+            const CustomTextTitleAuth(text: "Success SignUp"),
             const SizedBox(height: 10),
             const CustomTextBodyAuth(
                 text:
@@ -47,7 +46,7 @@ class ForgetPassword extends StatelessWidget {
             CustomButtonAuth(
               text: "Check",
               onPressed: () {
-                controller.goToVeryfiyCode();
+                controller.goToSuccessSignUp();
               },
             ),
             const SizedBox(height: 40),

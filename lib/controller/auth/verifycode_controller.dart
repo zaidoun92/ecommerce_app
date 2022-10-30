@@ -1,5 +1,4 @@
 import 'package:ecommerce_app/core/constant/routes_name.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 abstract class VerifyCodeController extends GetxController {
@@ -21,6 +20,7 @@ class VerifyCodeControllerImp extends VerifyCodeController {
   }
 
   @override
+  // ignore: unnecessary_overrides
   void onInit() {
     super.onInit();
   }

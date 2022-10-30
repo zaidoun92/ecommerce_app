@@ -20,10 +20,10 @@ List<OnBoardingModel> onBoardingList = [
         "We Have a 100k Product , Choose \n Your product from our E-Commerce Shop",
     image: AppImageAsset.onBoardingImageThree,
   ),
-  OnBoardingModel(
-    title: "Fast Delivery",
-    body:
-        "We Have a 100k Product , Choose \n Your product from our E-Commerce Shop",
-    image: AppImageAsset.onBoardingImageFour,
-  ),
+  // OnBoardingModel(
+  //   title: "Fast Delivery",
+  //   body:
+  //       "We Have a 100k Product , Choose \n Your product from our E-Commerce Shop",
+  //   image: AppImageAsset.onBoardingImageFour,
+  // ),
 ];
