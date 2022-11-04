@@ -34,21 +34,19 @@ class Login extends StatelessWidget {
           children: [
             const LogoAuth(),
             const SizedBox(height: 20),
-            const CustomTextTitleAuth(text: "Welcome Back"),
+            CustomTextTitleAuth(text: "10".tr),
             const SizedBox(height: 10),
-            const CustomTextBodyAuth(
-                text:
-                    "Sign In With Your Email And Password Or Continue With Social Media"),
+            CustomTextBodyAuth(text: "11".tr),
             const SizedBox(height: 45),
             CustomTextFormAuth(
-              hintText: "Enter Your Email",
-              labelText: "Email",
+              hintText: "12".tr,
+              labelText: "18".tr,
               iconData: Icons.email_outlined,
               myController: controller.email,
             ),
             CustomTextFormAuth(
-              hintText: "Enter Your Password",
-              labelText: "Password",
+              hintText: "13".tr,
+              labelText: "19".tr,
               iconData: Icons.lock_outline,
               myController: controller.password,
             ),
@@ -56,19 +54,19 @@ class Login extends StatelessWidget {
               onTap: () {
                 controller.goToForgetPassword();
               },
-              child: const Text(
-                "Forget Password",
+              child: Text(
+                "14".tr,
                 textAlign: TextAlign.end,
               ),
             ),
             CustomButtonAuth(
-              text: "Sign In",
+              text: "15".tr,
               onPressed: () {},
             ),
             const SizedBox(height: 40),
             CustomTextSignUpOrSignIn(
-              textone: "Don't have an account ? ",
-              texttwo: "SignUp",
+              textone: "16".tr,
+              texttwo: "17".tr,
               onTap: () {
                 controller.goToSiginUp();
               },

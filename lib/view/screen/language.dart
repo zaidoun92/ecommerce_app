@@ -3,7 +3,7 @@ import 'package:ecommerce_app/core/localization/changelocal.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../widget/language/custombuttonlang.dart';
+import '../widget/language/custombuttonlang.dart';
 
 class Language extends GetView<LocaleController> {
   const Language({super.key});

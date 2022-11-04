@@ -21,7 +21,7 @@ class ForgetPassword extends StatelessWidget {
         backgroundColor: AppColor.backgroundColor,
         elevation: 0.0,
         title: Text(
-          'Forget Password',
+          '14'.tr,
           style: Theme.of(context).textTheme.headline1!.copyWith(
                 color: AppColor.grey,
               ),
@@ -32,20 +32,18 @@ class ForgetPassword extends StatelessWidget {
         child: ListView(
           children: [
             const SizedBox(height: 20),
-            const CustomTextTitleAuth(text: "Check Email"),
+            CustomTextTitleAuth(text: "27".tr),
             const SizedBox(height: 10),
-            const CustomTextBodyAuth(
-                text:
-                    "please Enter Your Email Address To Recive A verification code"),
+            CustomTextBodyAuth(text: "29".tr),
             const SizedBox(height: 15),
             CustomTextFormAuth(
-              hintText: "Enter Your Email",
-              labelText: "Email",
+              hintText: "12".tr,
+              labelText: "18".tr,
               iconData: Icons.email_outlined,
               myController: controller.email,
             ),
             CustomButtonAuth(
-              text: "Check",
+              text: "30".tr,
               onPressed: () {
                 controller.goToVeryfiyCode();
               },

@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/core/constant/color.dart';
 import 'package:ecommerce_app/view/widget/auth/custombuttonauth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SuccessSignUp extends StatelessWidget {
   const SuccessSignUp({super.key});
@@ -13,7 +14,7 @@ class SuccessSignUp extends StatelessWidget {
         backgroundColor: AppColor.backgroundColor,
         elevation: 0.0,
         title: Text(
-          'Success',
+          '32'.tr,
           style: Theme.of(context).textTheme.headline1!.copyWith(
                 color: AppColor.grey,
               ),
@@ -30,13 +31,17 @@ class SuccessSignUp extends StatelessWidget {
                 color: AppColor.primaryColor,
               ),
             ),
-            const Text("...."),
-            const Text("...."),
+            Text("37".tr,
+                style: Theme.of(context)
+                    .textTheme
+                    .headline1!
+                    .copyWith(fontSize: 30)),
+            Text("38".tr),
             const Spacer(),
             Container(
               width: double.infinity,
               child: CustomButtonAuth(
-                text: "Go To Login",
+                text: "31".tr,
                 onPressed: () {},
               ),
             ),
