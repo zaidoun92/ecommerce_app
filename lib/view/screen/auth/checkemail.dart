@@ -36,6 +36,7 @@ class CheckEmail extends StatelessWidget {
             CustomTextBodyAuth(text: "29".tr),
             const SizedBox(height: 15),
             CustomTextFormAuth(
+              valid: (val) {},
               hintText: "12".tr,
               labelText: "18".tr,
               iconData: Icons.email_outlined,
@@ -44,7 +45,7 @@ class CheckEmail extends StatelessWidget {
             CustomButtonAuth(
               text: "30".tr,
               onPressed: () {
-                controller.goToSuccessSignUp();
+                controller.goToVerfiyCode();
               },
             ),
             const SizedBox(height: 40),
