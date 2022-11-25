@@ -37,6 +37,7 @@ class ResetPassword extends StatelessWidget {
             CustomTextBodyAuth(text: "35".tr),
             const SizedBox(height: 15),
             CustomTextFormAuth(
+              isNumber: false,
               valid: (val) {},
               hintText: "13".tr,
               labelText: "19".tr,
@@ -44,6 +45,7 @@ class ResetPassword extends StatelessWidget {
               myController: controller.password,
             ),
             CustomTextFormAuth(
+              isNumber: false,
               valid: (val) {},
               hintText: "Re ${"13".tr}",
               labelText: "19".tr,

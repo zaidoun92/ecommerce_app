@@ -37,6 +37,7 @@ class ForgetPassword extends StatelessWidget {
             CustomTextBodyAuth(text: "29".tr),
             const SizedBox(height: 15),
             CustomTextFormAuth(
+              isNumber: false,
               valid: (val) {},
               hintText: "12".tr,
               labelText: "18".tr,
