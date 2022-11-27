@@ -74,6 +74,10 @@ class SignUp extends StatelessWidget {
                   ),
                   CustomTextFormAuth(
                     isNumber: false,
+                    obsecureText: controller.isshowpassword,
+                    onTapIcon: () {
+                      controller.showPassword();
+                    },
                     valid: (val) {
                       return validInput(val!, 5, 100, "password");
                     },
